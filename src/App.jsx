@@ -1,12 +1,14 @@
 import React from 'react'
 import './App.css'
 import Nav from './components/Navbar'
+import Gallery from './components/Gallery'
 
 function App() {
   return (
-    <div className="Header">
-      <Nav />
-      <h1 className='heading'>REFACTORIZE();</h1>
+    <div className="app">
+    <div className="gallery">
+      <Gallery/>
+    </div>
     </div>
   )
 }

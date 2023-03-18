@@ -1,0 +1,112 @@
+.tile{
+    background-color: yellow;
+    height: 40vh;
+    width: 33vw;
+    margin: 10px;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+}
+
+.grid{
+    --spacer: 10px;
+    gap: var(--spacer);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+    overflow-x: auto;
+    overscroll-behavior-inline:contain;
+    scroll-behavior: smooth;
+}
+.right:hover{
+    box-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+    filter: none;
+}
+.right:active{
+    box-shadow: none;
+}
+.right{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/src/assets/right.svg');
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    top: 25vh;
+    filter: invert();
+}
+.left:hover{
+    box-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+    filter: none;
+}
+.left:active{
+    box-shadow: none;
+}
+.left{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/src/assets/left.svg');
+    filter: invert();
+    position: absolute;
+    left: 10px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    top: 25vh;
+}
+.grid::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--spacer); 
+}
+
+.snaps-inline > div{
+    scroll-snap-align: start;
+}
+
+#synthesise{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#visualise{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}#panel{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}#cryptx{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}#idealise{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}#surprise{
+    background-image: url('/src/assets/tile-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.enlarge{
+    scale: 1.5;
+    box-shadow: 4px 4px 8px rgba(255,255,255,0.5);
+    z-index: 10;
+}
+.diminish{
+    scale: 0.8;
+    filter: grayscale();
+}

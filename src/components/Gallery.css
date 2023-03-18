@@ -1,3 +1,4 @@
+
 .tile{
     background-color: yellow;
     height: 40vh;
@@ -5,17 +6,62 @@
     margin: 10px;
     border-radius: 5px;
     scroll-behavior: smooth;
+    transition: 300ms ease;
 }
 
+.grid:hover >*{
+    transform: scale(0.9);
+    filter: grayscale();
+}
+.tile:hover{
+    transform: scale(1.1);
+    filter:none;
+    z-index: 2;
+}
+
+
+
+/* #synthesise:hover{
+    transform: scale(1.2);
+    filter:none;
+}
+#visualise:hover{
+    transform: scale(1.2);
+    filter:none;
+}#panel:hover{
+    transform: scale(1.2);
+    filter:none;
+}#cryptx:hover{
+    transform: scale(1.2);
+    filter:none;
+}#idealise:hover{
+    transform: scale(1.2);
+    filter:none;
+}#surprise:hover{
+    transform: scale(1.2);
+    filter:none;
+} */
+
+/* .enlarge{
+    
+}
+.diminish{
+    transform: scale(0.8);
+    filter: grayscale();
+} */
+
+
 .grid{
+    padding: 10px;
     --spacer: 10px;
-    gap: var(--spacer);
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 36%;
     overflow-x: auto;
+    overflow-y:auto;
     overscroll-behavior-inline:contain;
     scroll-behavior: smooth;
+    height: auto;
 }
 .right:hover{
     box-shadow: 2px 2px 4px rgba(255,255,255,0.8);
@@ -61,18 +107,18 @@
     border-radius: 50px;
     top: 25vh;
 }
-.grid::-webkit-scrollbar{
+/* .grid::-webkit-scrollbar{
     -webkit-appearance: none;
-}
+} */
 
-.snaps-inline{
+/* .snaps-inline{
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: var(--spacer); 
 }
 
 .snaps-inline > div{
     scroll-snap-align: start;
-}
+} */
 
 #synthesise{
     background-image: url('/src/assets/tile-bg.jpg');
@@ -101,12 +147,9 @@
     background-repeat: no-repeat;
 }
 
-.enlarge{
-    scale: 1.5;
-    box-shadow: 4px 4px 8px rgba(255,255,255,0.5);
-    z-index: 10;
-}
-.diminish{
-    scale: 0.8;
-    filter: grayscale();
+.info-text{
+    transition: 300ms ease;
+    margin-top: 5vh;
+    text-align: center;
+    transition-delay: 1s;
 }

@@ -1,11 +1,13 @@
 import React, {useState, useEffect, useRef}  from 'react';
-import './Gallery.css'
-import Info from '../components/Info'
+import './Gallery.css';
+import Info from '../components/Info';
+import Card from './Card';
 
 export default function Gallery()
 {
     const [active, setActive]= useState(0);
-    const [scrollPosition, setScrollPosition]= useState(0);
+    const [showCard, setShowCard]= useState(false);
+    const gallery= useRef(null);
     const synthesise= useRef(null)
     const panel= useRef(null)
     const visualise= useRef(null)
@@ -13,6 +15,9 @@ export default function Gallery()
     const surprise= useRef(null)
     const idealise= useRef(null)
 
+    function toggleCard(){
+      setShowCard(!showCard);
+    }
     useEffect(() => {
         function handleHover(eventNum) {
           setActive(eventNum);
@@ -37,49 +42,58 @@ export default function Gallery()
         idealise.current.addEventListener("mouseenter", () => {
           handleHover(6);
         });
-        // reverting to original text in info
-        synthesise.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
-          panel.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
-          visualise.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
-          cryptx.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
-          surprise.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
-          idealise.current.addEventListener("mouseleave", () => {
-            handleHover(0);
-          });
+         // reverting to original text in info
+        gallery.current.addEventListener("mouseleave",()=>{
+          handleHover(0);
+        });
+       // code to activate the popup card
+       synthesise.current.addEventListener("click", () => {
+        toggleCard()
+      });
+      panel.current.addEventListener("click", () => {
+        toggleCard()
+      });
+      visualise.current.addEventListener("click", () => {
+        toggleCard()
+      });
+      cryptx.current.addEventListener("click", () => {
+        toggleCard()
+      });
+      surprise.current.addEventListener("click", () => {
+        toggleCard();
+      });
+      idealise.current.addEventListener("click", () => {
+        toggleCard();
+      });
         
       }, []);
     function leftScroll(){
-        setScrollPosition(scrollPosition-300);
+      gallery.current.scrollLeft -=320;
     }
     function rightScroll(){
-        setScrollPosition(scrollPosition+300);
+      gallery.current.scrollLeft += 320;
     }
 
     return (
         <div className= "gallery">
-            <h1>Gallery</h1>
-            <div className="grid">
-                <button className="left" onClick={leftScroll}></button>
+            <h1 className= "events">Events</h1>
+            <button className="left" onClick={leftScroll}></button>
+            <button className="right" onClick={rightScroll}></button>
+            <div className="grid snaps-inline" ref={gallery}>
                 <div id= "synthesise"className="tile" ref={synthesise}></div>
                 <div id= "panel" className="tile" ref={panel}></div>
                 <div id= "visualise" className="tile" ref={visualise}></div>
                 <div id= "cryptx" className="tile" ref={cryptx}></div>
                 <div id= "surprise" className="tile" ref={surprise}></div>
                 <div id= "idealise" className="tile" ref={idealise}></div>
-                <button className="right" onClick={rightScroll}></button>
             </div>
+            {showCard && (
+              <div className="card-background" onClick={toggleCard}>
+                <Card event={active}/>
+              </div>
+            )}
             <div className="info">
-                {active?<Info event={active}/>:<h1 className="info-text">Hover on the tiles for date, time and venue. Click to know more</h1>}
+                {active?<Info event={active}/>:<h1 className="info-text">Hover over the tiles for date, time and venue. Click to know more</h1>}
             </div>
         </div>
     )

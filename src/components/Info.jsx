@@ -62,9 +62,9 @@ export default function Info(props){
     const eventName= getEventName();
     return (
         <div className="info">
-            <h1>Venue: {eventList[eventName].venue}</h1>
-            <h2>Date: {eventList[eventName].date}</h2>
-            <h2>Time: {eventList[eventName].time}</h2>
+            <h1 id="venue">Venue: {eventList[eventName].venue}</h1>
+            <h2 id="date">Date: {eventList[eventName].date}</h2>
+            <h2 id="time">Time: {eventList[eventName].time}</h2>
         </div>
     )
 }

@@ -18,38 +18,9 @@
     filter:none;
     z-index: 2;
 }
-
-
-
-/* #synthesise:hover{
-    transform: scale(1.2);
-    filter:none;
+.tile:active{
+    transform: scale(1);
 }
-#visualise:hover{
-    transform: scale(1.2);
-    filter:none;
-}#panel:hover{
-    transform: scale(1.2);
-    filter:none;
-}#cryptx:hover{
-    transform: scale(1.2);
-    filter:none;
-}#idealise:hover{
-    transform: scale(1.2);
-    filter:none;
-}#surprise:hover{
-    transform: scale(1.2);
-    filter:none;
-} */
-
-/* .enlarge{
-    
-}
-.diminish{
-    transform: scale(0.8);
-    filter: grayscale();
-} */
-
 
 .grid{
     padding: 10px;
@@ -57,7 +28,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 36%;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y:auto;
     overscroll-behavior-inline:contain;
     scroll-behavior: smooth;
@@ -80,10 +51,12 @@
     width: 50px;
     height: 50px;
     color: black;
-    background-color: white;
+    background-color: none;
+    border:none;
     border-radius: 50px;
-    top: 25vh;
+    top: 10vh;
     filter: invert();
+    transition: 300ms ease;
 }
 .left:hover{
     box-shadow: 2px 2px 4px rgba(255,255,255,0.8);
@@ -105,20 +78,23 @@
     color: black;
     background-color: white;
     border-radius: 50px;
-    top: 25vh;
+    top: 10vh;
+    transition: 300ms ease;
+    background-color: none;
+    border:none;
 }
-/* .grid::-webkit-scrollbar{
+.grid::-webkit-scrollbar{
     -webkit-appearance: none;
-} */
+}
 
-/* .snaps-inline{
-    scroll-snap-type: inline mandatory;
+.snaps-inline{
+    scroll-snap-type: x ;
     scroll-padding-inline: var(--spacer); 
 }
 
 .snaps-inline > div{
     scroll-snap-align: start;
-} */
+}
 
 #synthesise{
     background-image: url('/src/assets/tile-bg.jpg');
@@ -152,4 +128,27 @@
     margin-top: 5vh;
     text-align: center;
     transition-delay: 1s;
+}
+
+.events{
+    text-align: center;
+    font-size: 60px;
+}
+
+.gallery{
+    height: 100vh;
+    overflow-y: hidden;
+}
+.card-background{
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
 }

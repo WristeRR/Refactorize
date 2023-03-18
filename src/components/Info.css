@@ -5,3 +5,6 @@
     margin-top: 5vh;
     transition: .3s ease;
 }
+#venue,#info,#time{
+    margin: 10px;
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../events.json';
 import './Info.css';
 
 const eventList={

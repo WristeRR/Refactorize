@@ -1,4 +1,7 @@
-
+*{
+    overflow-x:auto;
+    max-width: 100%;
+}
 .tile{
     background-color: yellow;
     height: 40vh;
@@ -57,6 +60,7 @@
     top: 10vh;
     filter: invert();
     transition: 300ms ease;
+    transform: translateX(-50);
 }
 .left:hover{
     box-shadow: 2px 2px 4px rgba(255,255,255,0.8);
@@ -137,7 +141,11 @@
 
 .gallery{
     height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
     overflow-y: hidden;
+    position: relative;
 }
 .card-background{
     background-color: rgba(0,0,0,0.7);

@@ -1,12 +1,15 @@
 import React from 'react'
 import './App.css'
 import Nav from './components/Navbar'
+import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
 
 function App() {
-  return (
-    <div className="Header">
+  return (  
+    <div>
       <Nav />
-      <h1 className='heading'>REFACTORIZE();</h1>
+      <Hero />
+      <About />
     </div>
   )
 }

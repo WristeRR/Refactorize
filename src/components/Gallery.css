@@ -101,28 +101,22 @@
 }
 
 #synthesise{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #visualise{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }#panel{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }#cryptx{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }#idealise{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }#surprise{
-    background-image: url('/src/assets/tile-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -159,4 +153,9 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
+}
+.card-text{
+    text-align: center;
+    font-size: 50px;
+    color: black;
 }

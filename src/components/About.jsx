@@ -6,7 +6,7 @@ export default function About(){
             <section className='about-content'>
                 <h1>About</h1>
                 <p className='about-info'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam culpa exercitationem rem aperiam a inventore, et dolore eaque laboriosam enim esse facere consequuntur odio aliquam repellat quas officia sit quos?
+                   The most anticipated annual fest of Randomize(); is here again <br />This year we bring 6 Events 
                 </p>
             </section>  
         </div>

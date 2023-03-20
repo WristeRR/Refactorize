@@ -80,12 +80,12 @@ export default function Gallery()
             <button className="left" onClick={leftScroll}></button>
             <button className="right" onClick={rightScroll}></button>
             <div className="grid snaps-inline" ref={gallery}>
-                <div id= "synthesise"className="tile" ref={synthesise}></div>
-                <div id= "panel" className="tile" ref={panel}></div>
-                <div id= "visualise" className="tile" ref={visualise}></div>
-                <div id= "cryptx" className="tile" ref={cryptx}></div>
-                <div id= "surprise" className="tile" ref={surprise}></div>
-                <div id= "idealise" className="tile" ref={idealise}></div>
+               <div id= "synthesise"className="tile" ref={synthesise}><h2 className='card-text'>Synthesize</h2></div>
+                <div id= "cryptx" className="tile" ref={cryptx}><h2 className='card-text'>Cryptx</h2></div>
+              <div id= "visualise" className="tile" ref={visualise}><h2 className='card-text'>Visualize</h2></div>
+                <div id= "idealise" className="tile" ref={idealise}><h2 className='card-text'>Idealize</h2></div>
+                 <div id= "surprise" className="tile" ref={surprise}><h2 className='card-text'>Surprize</h2></div>
+               <div id= "panel" className="tile" ref={panel}><h2 className='card-text'>Panel Talk</h2></div>
             </div>
             {showCard && (
               <div className="card-background" onClick={toggleCard}>

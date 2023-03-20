@@ -10,6 +10,9 @@
     border-radius: 5px;
     scroll-behavior: smooth;
     transition: 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid:hover >*{
@@ -154,7 +157,7 @@
     align-items: center;
     justify-content: center;
 }
-.card-text{
+.tile-text{
     text-align: center;
     font-size: 50px;
     color: black;

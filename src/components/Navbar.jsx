@@ -10,10 +10,10 @@ export default function Nav(){
           <div className='void'>
           </div>
             <div className='nav-items'>
-             <Link className='f1' to='#Hero' smooth><h3>Home</h3></Link>
-             <Link className='f1' to='#About'smooth><h3>About</h3></Link>
-             <Link className='f1' to='#Sponsors'smooth><h3>Sponsors</h3></Link>
-             <a href='https://www.randomizemuj.com/team' className='f1'><h3>Team</h3></a>
+             <Link className='f1' to='#Hero' smooth><span>Home</span></Link>
+             <Link className='f1' to='#About'smooth><span>About</span></Link>
+             <Link className='f1' to='#Sponsors'smooth><span>Sponsors</span></Link>
+             <a href='https://www.randomizemuj.com/team' className='f1'><span>Team</span></a>
             </div>
       </nav>
       </BrowserRouter>

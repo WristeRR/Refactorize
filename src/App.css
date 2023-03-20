@@ -12,6 +12,9 @@ body {
   padding-bottom: 10%;
   height: 60vh;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
 }
 
 
@@ -76,22 +79,26 @@ a{
   background-image: url(./images/d1.jpg);
   background-repeat: round;
   padding-right: 0%;
-  width: 60%;
+  width: 60vw;
 }
 
 .nav-items{
-  width: 40%;
+  width: auto;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   font-family: 'Ubuntu', sans-serif;
+  align-self: flex-end !important;
 }
 .f1{
   background-color: black;
-  padding-left: 7.2%;
-  padding-right: 8.2%;
+  padding: 10px;
   text-decoration: none;
   color:white;
+  width: 200px;
+  font-size: x-large;
+  text-align: center;
+  border-right: 1px solid grey;
 
 }
 .f1:hover{
@@ -102,7 +109,8 @@ a{
 }
 
 .refactorize{
-  width: 55%;
+  width: 60vw;
+  height: auto;
   padding-top: 3.5%;
 }
 

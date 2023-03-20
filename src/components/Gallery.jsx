@@ -6,6 +6,7 @@ import Card from './Card';
 export default function Gallery()
 {
     const [active, setActive]= useState(0);
+    const [clicked, setClicked]= useState(0);
     const [showCard, setShowCard]= useState(false);
     const gallery= useRef(null);
     const synthesise= useRef(null)
@@ -17,6 +18,9 @@ export default function Gallery()
 
     function toggleCard(){
       setShowCard(!showCard);
+    }
+    function getClicked(click){
+      setClicked(click)
     }
     useEffect(() => {
         function handleHover(eventNum) {
@@ -49,21 +53,27 @@ export default function Gallery()
        // code to activate the popup card
        synthesise.current.addEventListener("click", () => {
         toggleCard()
+        getClicked(1);
       });
       panel.current.addEventListener("click", () => {
-        toggleCard()
+        toggleCard(2)
+        getClicked(2);
       });
       visualise.current.addEventListener("click", () => {
-        toggleCard()
+        toggleCard(3)
+        getClicked(3);
       });
       cryptx.current.addEventListener("click", () => {
-        toggleCard()
+        toggleCard(4)
+        getClicked(4);
       });
       surprise.current.addEventListener("click", () => {
-        toggleCard();
+        toggleCard(5);
+        getClicked(5);
       });
       idealise.current.addEventListener("click", () => {
-        toggleCard();
+        toggleCard(6);
+        getClicked(6);
       });
         
       }, []);
@@ -80,16 +90,16 @@ export default function Gallery()
             <button className="left" onClick={leftScroll}></button>
             <button className="right" onClick={rightScroll}></button>
             <div className="grid snaps-inline" ref={gallery}>
-               <div id= "synthesise"className="tile" ref={synthesise}><h2 className='card-text'>Synthesize</h2></div>
-                <div id= "cryptx" className="tile" ref={cryptx}><h2 className='card-text'>Cryptx</h2></div>
-              <div id= "visualise" className="tile" ref={visualise}><h2 className='card-text'>Visualize</h2></div>
-                <div id= "idealise" className="tile" ref={idealise}><h2 className='card-text'>Idealize</h2></div>
-                 <div id= "surprise" className="tile" ref={surprise}><h2 className='card-text'>Surprize</h2></div>
-               <div id= "panel" className="tile" ref={panel}><h2 className='card-text'>Panel Talk</h2></div>
+              <div id= "synthesise"className="tile" ref={synthesise}><h2 className='tile-text'>Synthesize</h2></div>
+              <div id= "panel" className="tile" ref={panel}><h2 className='tile-text'>Panel Talk</h2></div>
+              <div id= "visualise" className="tile" ref={visualise}><h2 className='tile-text'>Visualize</h2></div>
+              <div id= "cryptx" className="tile" ref={cryptx}><h2 className='tile-text'>Cryptx</h2></div>
+              <div id= "surprise" className="tile" ref={surprise}><h2 className='tile-text'>Surprize</h2></div>
+              <div id= "idealise" className="tile" ref={idealise}><h2 className='tile-text'>Idealize</h2></div>
             </div>
             {showCard && (
               <div className="card-background" onClick={toggleCard}>
-                <Card event={active}/>
+                <Card event={clicked}/>
               </div>
             )}
             <div className="info">

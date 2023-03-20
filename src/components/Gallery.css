@@ -3,7 +3,7 @@
     max-width: 100%;
 }
 .tile{
-    background-color: yellow;
+    background-image: linear-gradient(0deg, #e88a41, #f7cb53 , #ffd900);
     height: 40vh;
     width: 33vw;
     margin: 10px;

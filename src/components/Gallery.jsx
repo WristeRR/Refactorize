@@ -93,8 +93,8 @@ export default function Gallery()
               <div id= "synthesise"className="tile" ref={synthesise}><h2 className='tile-text'>Synthesize</h2></div>
               <div id= "panel" className="tile" ref={panel}><h2 className='tile-text'>Panel Talk</h2></div>
               <div id= "visualise" className="tile" ref={visualise}><h2 className='tile-text'>Visualize</h2></div>
-              <div id= "cryptx" className="tile" ref={cryptx}><h2 className='tile-text'>Cryptx</h2></div>
-              <div id= "surprise" className="tile" ref={surprise}><h2 className='tile-text'>Surprize</h2></div>
+              <div id= "cryptx" className="tile" ref={cryptx}><h2 className='tile-text'>CryptX</h2></div>
+              <div id= "surprise" className="tile" ref={surprise}><h2 className='tile-text'>Surprise</h2></div>
               <div id= "idealise" className="tile" ref={idealise}><h2 className='tile-text'>Idealize</h2></div>
             </div>
             {showCard && (

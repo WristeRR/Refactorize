@@ -1,7 +1,6 @@
 import React from "react";
 
 import Sponsor from "./components/Sponsor/Sponsor.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 import "./App.css";
 import Nav from "./components/Navbar";
 import Gallery from "./components/Gallery";
@@ -11,10 +10,10 @@ function App() {
   return (
     <div className="app">
       <Nav />
-      <Sponsor />
       <Hero />
       <About />
       <Gallery />
+      <Sponsor />
     </div>
   );
 }

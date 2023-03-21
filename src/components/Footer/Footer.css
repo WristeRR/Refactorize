@@ -1,0 +1,8 @@
+.footer{
+    display :flex;
+    background-color: grey;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 10vh;
+    padding: 2rem;
+}

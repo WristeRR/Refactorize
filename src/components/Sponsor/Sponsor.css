@@ -1,0 +1,48 @@
+.sponsor{
+    height: fit-content;
+    width: fit-content;
+    background-color: black;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    color: white;
+}
+
+.eventHeading{
+    font-size: 5rem;
+    position: relative;
+    justify-self: center;
+    text-decoration: none;
+    color: white;
+}
+
+.eventHeading:hover{
+    
+}
+.logosContainer{
+    display: block;
+    padding: 30px;
+    padding-top: 0px;
+    width: fit-content;
+    height: auto;
+    flex-wrap: wrap;
+    text-align: center;   
+
+}
+
+.logo {
+    height: 4rem;
+    width: auto;
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+    margin: 1rem 2rem;
+}
+
+.logo:hover {
+    filter: grayscale(0%);
+}
+
+
+
+
+

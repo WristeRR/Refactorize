@@ -1,15 +1,20 @@
 import React from "react";
-import "./App.css";
-import Nav from "./components/Navbar";
+
 import Sponsor from "./components/Sponsor/Sponsor.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-
+import "./App.css";
+import Nav from "./components/Navbar";
+import Gallery from "./components/Gallery";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
 function App() {
   return (
-    <div className="Header">
+    <div className="app">
       <Nav />
-      <h1 className="heading">REFACTORIZE();</h1>
       <Sponsor />
+      <Hero />
+      <About />
+      <Gallery />
     </div>
   );
 }

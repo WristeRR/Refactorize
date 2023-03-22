@@ -104,22 +104,28 @@
 }
 
 #synthesise{
+    background-image: url('../images/Frame5.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #visualise{
+    background-image: url('../images/Frame8.png');
     background-size: cover;
     background-repeat: no-repeat;
 }#panel{
+    background-image: url('../images/Frame6.png');
     background-size: cover;
     background-repeat: no-repeat;
 }#cryptx{
+    background-image: url('../images/Frame4.png');
     background-size: cover;
     background-repeat: no-repeat;
 }#idealise{
+    background-image: url('../images/idealizxe.png');
     background-size: cover;
     background-repeat: no-repeat;
 }#surprise{
+    background-image: url('../images/Frame3.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -156,9 +162,4 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
-}
-.tile-text{
-    text-align: center;
-    font-size: 50px;
-    color: black;
 }

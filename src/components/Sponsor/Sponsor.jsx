@@ -4,8 +4,8 @@ import { sponsorsList } from "./sponsorsList.js";
 
 export default function Sponsor() {
   return (
-    <div className="sponsor">
-      <h1 className="eventHeading">SPONSORS</h1>
+    <div className="sponsor" id="Sponsors">
+      <h1 className="eventHeading">Sponsors</h1>
       <div className="logosContainer">
         {sponsorsList.map((sponsor) => {
           console.log(sponsor.src);

@@ -111,18 +111,18 @@ a {
 }
 
 .about {
-  padding-top: 80px;
+  padding-top: 60px;
   display: flex;
   justify-content: center;
   background-color: #050505;
   line-height: 50px;
   color: white;
-  height: 100vh;
+  height: 90vh;
   word-spacing: normal;
 }
 
 .about-content {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   font-size: 37px;
   color: #f1faee;
@@ -130,5 +130,12 @@ a {
 }
 
 .about-header {
+  overflow-y: hidden;
+}
+.about-info{
+  font-size: 26px;
+  font-weight: 300;
+  padding-left: 140px;
+  padding-right: 140px;
   overflow-y: hidden;
 }

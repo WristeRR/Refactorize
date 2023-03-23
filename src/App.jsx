@@ -6,6 +6,7 @@ import Nav from "./components/Navbar";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Gallery />
       <Sponsor />
+      <Footer />
     </div>
   );
 }

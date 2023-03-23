@@ -8,7 +8,6 @@ export default function Sponsor() {
       <h1 className="eventHeading">Sponsors</h1>
       <div className="logosContainer">
         {sponsorsList.map((sponsor) => {
-          console.log(sponsor.src);
           return (
             <a target="_blank" rel="noreferrer" href={sponsor.href}>
               <img className="logo" src={sponsor.src} alt={sponsor.name} />

@@ -17,7 +17,7 @@ export default function Footer() {
             <Link to="#About" smooth>
               <span className="quickLink">About</span>
             </Link>
-            <Link to="#Gallery" smooth>
+            <Link to="#Events" smooth>
               <span className="quickLink">Events</span>
             </Link>
             <Link to="#Sponsors" smooth>

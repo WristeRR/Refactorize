@@ -9,16 +9,13 @@
 }
 
 .eventHeading{
-    font-size: 5rem;
+    font-size: 80px;
     position: relative;
     justify-self: center;
     text-decoration: none;
     color: white;
 }
 
-.eventHeading:hover{
-    
-}
 .logosContainer{
     display: block;
     padding: 30px;

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Card.css'
 
 const eventList ={
-    SYNTHESIZE: "The name tells half the story. Participate in Randomize's 36-hour hackathon and get a chance to prove that you have what it takes to change the world.",
+    SYNTHESIZE: "The name tells half the story. Participate in Randomize's 24-hour hackathon and get a chance to prove that you have what it takes to change the world.The Hackathon will end on 1st April 1:30 pm. For presentatioon updates stay tuned to whatsapp groups.",
     PANEL: "This is a Q&A panel discussion on AWS, featuring highly successful individuals in the field.",
     VISUALISE: "An event which walks us through basics of design theory, with a bit of a hands-on experience on software’s like photoshop",
     CRYPTX: "A fun cryptic hunt that will make you scratch your head.",

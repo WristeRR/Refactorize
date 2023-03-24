@@ -4,17 +4,33 @@ export default function About() {
   return (
     <div className="about" id="About">
       <section className="about-content">
-        <h1 className="about-header">About</h1>
+        <h1 className="about-header">Welcome, brave traveler...</h1>
         <p className="about-info">
-          Randomize(); has always tried its best to encourage coding culture by
-          hosting meaningful and brainstorming events for the brightest minds of
-          our community. We are thrilled to announce the opening of
-          "REFACTORIZE();", our own annual techfest where we give everyone a
-          chance to learn and execute, even if you are a newbie. Get ready
-          because your brain is getting a gym membership for 3 days! It might
-          get tiring, but it'll all be worth it!
-          <br />6 Events, Lot's of CODING and LEARNING. Hackathon, Panel talk,
-          workshop, ideathon, Cryptic hunt, and of course the Trivia night!
+          <p>
+            Join us for a <span>3-day celebration</span> of all things tech,
+            where innovation and creativity collide to create a fantastical
+            world of coding challenges, cryptic hunts, and trivia quizzes.
+          </p>
+          <p>
+            Venture forth and conquer our <span>flagship hackathon</span>, where
+            only the strongest coding skills will lead you to glory and victory.
+          </p>
+          <p>
+            But be warned, dear adventurer, for our challenges are not for the
+            faint of heart. Our <span>cryptic hunt</span> will test your
+            problem-solving abilities to the limit, and our{" "}
+            <span>trivia quiz</span> will push your knowledge of all things tech
+            to its breaking point. Only the bravest and most skilled among you
+            will emerge victorious.
+          </p>
+          <p>
+            So gear up and prepare yourself for a journey unlike any other.
+            Whether you're a seasoned veteran of the tech world or a new
+            adventurer just starting out, <span>Refactorize();</span> has
+            something for everyone. Join us for a weekend of adventure,
+            excitement, and innovation. The fate of the tech world rests in your
+            hands!
+          </p>
         </p>
       </section>
     </div>

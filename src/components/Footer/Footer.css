@@ -8,6 +8,7 @@
   justify-content: space-between;
   background-color: #0a0908;
   color: whitesmoke;
+  border-top: 2px solid rgb(16, 15, 40);
 }
 
 a:-webkit-any-link {
@@ -58,7 +59,7 @@ a:-webkit-any-link {
   cursor: pointer;
   color: #6c6d6d;
   margin: auto 1rem;
-  transition: color 1s ease;
+  transition: color 300ms ease;
 }
 
 .socialInsta:hover {
@@ -69,7 +70,7 @@ a:-webkit-any-link {
   cursor: pointer;
   color: #6c6d6d;
   margin: auto 1rem;
-  transition: color 1s ease;
+  transition: color 300ms ease;
 }
 
 .socialLinkedIn:hover {
@@ -78,7 +79,7 @@ a:-webkit-any-link {
 
 .socialGithub {
   cursor: pointer;
-  transition: color 1s ease-in-out;
+  transition: color 300ms ease;
   color: #6c6d6d;
   margin: auto 1rem;
 }
@@ -89,7 +90,7 @@ a:-webkit-any-link {
 
 .socialDiscord {
   cursor: pointer;
-  transition: color 1s ease;
+  transition: color 300ms ease;
   color: #6c6d6d;
   margin: auto 1rem;
 }

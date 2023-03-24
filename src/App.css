@@ -1,63 +1,141 @@
-body {
+body,html {
   margin: 0;
-  font-family: 'League Spartan', sans-serif;
-
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
 }
 
-.Header{
-  background: url(./images/Frame1.png)no-repeat center center/cover;
-  padding-top: 6%;
+body {
+  background-color: #000028;
+  letter-spacing: 0.05em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Header {
+  background-color: #00000b;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #00000b 15px ), repeating-linear-gradient( #161b5255, #12185d );  
+  min-height: 100vh;
+  padding-top: 10%;
   padding-bottom: 10%;
-  height: 60vh;
-}
-.navbar{  
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.void{
+
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+.void {
   background-image: url(./images/d1.jpg);
   background-repeat: round;
   padding-right: 0%;
-  width: 60%;
+  width: 60vw;
 }
 
-.nav-items{
-  width: 40%;
+.nav-items {
+  width:100%;
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  font-family: 'Ubuntu', sans-serif;
+  justify-content: space-between;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
-.f1{
-  background-color: black;
-  padding-left: 7.2%;
-  padding-right: 8.2%;
+.nav-link {
+  flex: 1;
   text-decoration: none;
-  color:white;
-
-}
-.f1:hover{
-  background: linear-gradient(towards center,white,black);
-  transition-duration: .75s;
-  color: black;
-  background-color: white;
-}
-
-.refactorize{
-  width: 55%;
-  transform: translateY(125%);
-}
-.randomize_logo{
-  width: 10%;
-  transform: translateY(105%);
-}
-.about{
-  display: flex;
-}
-
-.about-content{
-  justify-content: center;
+  color: white;
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform:capitalize;
+  font-weight: 400;
   text-align: center;
-  font-size: 40px;
+  padding: 20px;
+  transition: 0.5s;
+  text-underline-offset: 5px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.refactorize {
+  width: 60vw;
+  height: auto;
+  padding-top: 3.5%;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 100vh;
+  width:100%;
+  text-align: center;
+  background-image: linear-gradient();
+}
+
+.about-content {
+  font-size: 1rem;
+  color: #f1faee;
+  width: 85%;
+}
+
+.about-header {
+  overflow-y: hidden;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.about-info{
+  font-family: "Gruppo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-left: 140px;
+  padding-right: 140px;
+  overflow-y: hidden;
+}
+
+.about-info span {
+  font-size: 1.8rem;
+}
+
+.buttons {
+  margin-top: 50px
+}
+
+
+.btn-sponsor, .btn-register {
+  color: white;
+  border-style: none;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 15px 30px;
+  margin: 5px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+.btn-sponsor:hover, .btn-register:hover {
+  transform: translateY(-2px);
+}
+
+.btn-register {
+  background-color: white;
+  color: black
+}
+
+.btn-sponsor {
+  background-color: transparent;
+  border: 1px solid white;
 }

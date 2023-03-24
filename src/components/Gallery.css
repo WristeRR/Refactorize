@@ -3,13 +3,16 @@
     max-width: 100%;
 }
 .tile{
-    background-color: yellow;
+    background-image: linear-gradient(0deg, #e88a41, #f7cb53 , #ffd900);
     height: 40vh;
     width: 33vw;
     margin: 10px;
     border-radius: 5px;
     scroll-behavior: smooth;
     transition: 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 .grid:hover >*{
@@ -101,29 +104,29 @@
 }
 
 #synthesise{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/Frame5.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }
 #visualise{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/Frame8.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }#panel{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/Frame6.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }#cryptx{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/Frame4.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }#idealise{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/idealizxe.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }#surprise{
-    background-image: url('/src/assets/tile-bg.jpg');
-    background-size: cover;
+    background-image: url('../images/Frame3.png');
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -146,7 +149,11 @@
     color: white;
     overflow-y: hidden;
     position: relative;
+<<<<<<< HEAD
     /*background-image: url('../images/Frame1.png');*/
+=======
+    padding-bottom: 2%;
+>>>>>>> main
 }
 .card-background{
     top: 0;
@@ -159,5 +166,9 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     background-image: url('../images/d1.jpg');
 }
+=======
+}
+>>>>>>> main

@@ -3,34 +3,34 @@ import './Info.css';
 
 const eventList={
     synthesise:{
-        venue: "TBD",
-        date: "24th March 2023",
-        time: "TBD"
+        venue: "Smt.Sharada Pai Auditorium",
+        date: "31st March 2023",
+        time: "1:30 pm start"
     },
     panel:{
-        venue: "TBD",
-        date: "26th March 2023",
-        time: "TBD"
+        venue: "Smt.Sharada Pai Auditorium",
+        date: "31st March 2023",
+        time: "2:00 to 3:30 pm"
     },
     visualise:{
-        venue: "TBD",
-        date: "25th March 2023",
-        time: "TBD"
+        venue: "Smt.Sharada Pai Auditorium",
+        date: "1st April 2023",
+        time: "4:00 to 6:00 pm"
     },
     cryptx:{
-        venue: "TBD",
-        date: "24th March 2023",
-        time: "TBD"
+        venue: "Discord",
+        date: "1st April 2023",
+        time: "2:00 pm start"
     },
     surprise:{
-        venue: "TBD",
-        date: "26th March 2023",
-        time: "TBD"
+        venue: "Discord",
+        date: "1st April 2023",
+        time: "Round 1 7:00 to 8:00 pm"
     },
     idealise:{
-        venue: "TBD",
-        date: "26th March 2023",
-        time: "TBD"
+        venue: "Smt.Sharada Pai Auditorium",
+        date: "31st March 2023",
+        time: "12:30 pm"
     }
     
 }

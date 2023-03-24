@@ -1,0 +1,100 @@
+.footer {
+  width: 100%;
+  min-height: 15vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0a0908;
+  color: whitesmoke;
+  border-top: 2px solid rgb(16, 15, 40);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+}
+
+.title {
+  padding: 3rem;
+  font-size: 3rem;
+}
+
+.quickLinks {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 2rem;
+}
+
+.quickLink {
+  text-decoration: none;
+  margin: 0px 1rem;
+  font-size: 18px;
+  color: #6c6d6d;
+}
+
+.quickLink:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials {
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socialInsta {
+  cursor: pointer;
+  color: #6c6d6d;
+  margin: auto 1rem;
+  transition: color 300ms ease;
+}
+
+.socialInsta:hover {
+  color: #e1306c;
+}
+
+.socialLinkedIn {
+  cursor: pointer;
+  color: #6c6d6d;
+  margin: auto 1rem;
+  transition: color 300ms ease;
+}
+
+.socialLinkedIn:hover {
+  color: #0077b5;
+}
+
+.socialGithub {
+  cursor: pointer;
+  transition: color 300ms ease;
+  color: #6c6d6d;
+  margin: auto 1rem;
+}
+
+.socialGithub:hover {
+  color: white;
+}
+
+.socialDiscord {
+  cursor: pointer;
+  transition: color 300ms ease;
+  color: #6c6d6d;
+  margin: auto 1rem;
+}
+
+.socialDiscord:hover {
+  color: #7289da;
+}

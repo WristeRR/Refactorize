@@ -61,7 +61,7 @@ export const sponsorsList = [
   },
   {
     name: "Streamyard",
-    src: "src/assets/sponsorLogos/streamyard.png",
+    src: "/streamyard.png",
     href: "https://streamyard.com/",
   },
   {

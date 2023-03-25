@@ -141,7 +141,3 @@ body {
   border: 1px solid white;
 }
 
-@media screen and (max-width: 768px) {
-  .about-content{
-  }
-}

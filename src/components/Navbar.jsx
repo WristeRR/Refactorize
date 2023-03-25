@@ -21,7 +21,7 @@ export default function Nav() {
           <Link className="nav-link" to="#Events" smooth>
             <span>Events</span>
           </Link>
-          <a href="https://www.randomizemuj.com/team" className="nav-link">
+          <a href="https://www.randomizemuj.com/team" className="nav-link" target="_blank">
             <span>Team</span>
           </a>
         </div>

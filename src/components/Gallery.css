@@ -12,7 +12,7 @@
     transition: 300ms ease;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .grid:hover >*{
@@ -105,28 +105,28 @@
 
 #synthesise{
     background-image: url('../images/Frame5.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 #visualise{
     background-image: url('../images/Frame8.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }#panel{
     background-image: url('../images/Frame6.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }#cryptx{
     background-image: url('../images/Frame4.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }#idealise{
     background-image: url('../images/idealizxe.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }#surprise{
     background-image: url('../images/Frame3.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -152,7 +152,6 @@
     padding-bottom: 2%;
 }
 .card-background{
-    background-color: rgba(0,0,0,0.7);
     top: 0;
     left: 0;
     width: 100%;
@@ -163,4 +162,23 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+    .tile{
+        min-width: 90vw;
+    }
+    .grid{
+        grid-auto-columns: auto;
+        max-height: 40vh;
+        overflow-y: hidden;
+    }
+    .info-text{
+        margin-top: 0;
+        padding: 30px;
+        font-size: x-large;
+    }
+    .card-background{
+        background-color: rgba(0,0,0,0.7);
+    }
 }

@@ -6,6 +6,7 @@ import Card from "./Card";
 export default function Gallery() {
   const [active, setActive] = useState(0);
   const [clicked, setClicked] = useState(0);
+  const [isMobile, setIsMobile]= useState(false);
   const [showCard, setShowCard] = useState(false);
   const gallery = useRef(null);
   const synthesise = useRef(null);
@@ -74,6 +75,22 @@ export default function Gallery() {
       toggleCard(6);
       getClicked(6);
     });
+
+    function handleResize(){
+      if (window.innerWidth <= 768){
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+
   }, []);
   function leftScroll() {
     gallery.current.scrollLeft -= 320;
@@ -105,8 +122,8 @@ export default function Gallery() {
           <Info event={active} />
         ) : (
           <h1 className="info-text">
-            Hover over the tiles for date, time and venue. Click to know more
-          </h1>
+            {isMobile? 'Hold a tile for date, time and venue. Tap to know more' : 'Hover over the tiles for date, time and venue. Click to know more'
+}</h1>
         )}
       </div>
     </div>

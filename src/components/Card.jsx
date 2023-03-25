@@ -35,7 +35,7 @@ export default function Card(props){
         <div className="card">
             <img className= "image"/>
             <span>{eventList[eventName]}</span>
-            <a href= "#"><button className="register-button">Register Now</button></a>
+            <a href= "https://forms.office.com/r/V6WKZaVr2S"><button className="register-button">Register Now</button></a>
         </div>
     )
 

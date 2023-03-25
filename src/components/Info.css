@@ -8,3 +8,10 @@
 #venue,#info,#time{
     margin: 3px;
 }
+
+@media screen and(max-width: 450px){
+    #venue,#info,#time{
+        margin-top: 0;
+        font-size: medium;
+    }
+}

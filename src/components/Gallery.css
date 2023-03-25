@@ -149,11 +149,7 @@
     color: white;
     overflow-y: hidden;
     position: relative;
-<<<<<<< HEAD
-    /*background-image: url('../images/Frame1.png');*/
-=======
     padding-bottom: 2%;
->>>>>>> main
 }
 .card-background{
     top: 0;
@@ -166,9 +162,23 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    background-image: url('../images/d1.jpg');
 }
-=======
+
+@media screen and (max-width: 768px){
+    .tile{
+        min-width: 90vw;
+    }
+    .grid{
+        grid-auto-columns: auto;
+        max-height: 40vh;
+        overflow-y: hidden;
+    }
+    .info-text{
+        margin-top: 0;
+        padding: 30px;
+        font-size: x-large;
+    }
+    .card-background{
+        background-color: rgba(0,0,0,0.7);
+    }
 }
->>>>>>> main

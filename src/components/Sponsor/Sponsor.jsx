@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sponsor.css";
-import { sponsorsList } from "./sponsorsList.js";
+import { sponsorsList } from "./sponsorsList";
 
 export default function Sponsor() {
   return (

@@ -6,6 +6,7 @@ import Card from "./Card";
 export default function Gallery() {
   const [active, setActive] = useState(0);
   const [clicked, setClicked] = useState(0);
+  const [current, setCurrent]= useState(1);
   const [isMobile, setIsMobile]= useState(false);
   const [showCard, setShowCard] = useState(false);
   const gallery = useRef(null);
@@ -15,6 +16,8 @@ export default function Gallery() {
   const cryptx = useRef(null);
   const surprise = useRef(null);
   const idealise = useRef(null);
+
+  const eventRefs= [synthesise, panel, visualise, cryptx, surprise, idealise];
 
   function toggleCard() {
     setShowCard(!showCard);
@@ -28,53 +31,40 @@ export default function Gallery() {
     }
 
     // Updating the info according to mouse hover
-    synthesise.current.addEventListener("mouseenter", () => {
-      handleHover(1);
-    });
-    panel.current.addEventListener("mouseenter", () => {
-      handleHover(2);
-    });
-    visualise.current.addEventListener("mouseenter", () => {
-      handleHover(3);
-    });
-    cryptx.current.addEventListener("mouseenter", () => {
-      handleHover(4);
-    });
-    surprise.current.addEventListener("mouseenter", () => {
-      handleHover(5);
-    });
-    idealise.current.addEventListener("mouseenter", () => {
-      handleHover(6);
-    });
+    for (let i=0; i<eventRefs.length;i++){
+      eventRefs[i].current.addEventListener("mouseenter", () => {
+        handleHover(i+1);
+      })
+    }
     // reverting to original text in info
     gallery.current.addEventListener("mouseleave", () => {
       handleHover(0);
     });
     // code to activate the popup card
-    synthesise.current.addEventListener("click", () => {
-      toggleCard();
-      getClicked(1);
-    });
-    panel.current.addEventListener("click", () => {
-      toggleCard(2);
-      getClicked(2);
-    });
-    visualise.current.addEventListener("click", () => {
-      toggleCard(3);
-      getClicked(3);
-    });
-    cryptx.current.addEventListener("click", () => {
-      toggleCard(4);
-      getClicked(4);
-    });
-    surprise.current.addEventListener("click", () => {
-      toggleCard(5);
-      getClicked(5);
-    });
-    idealise.current.addEventListener("click", () => {
-      toggleCard(6);
-      getClicked(6);
-    });
+    for (let i=0; i<eventRefs.length;i++){
+      eventRefs[i].current.addEventListener("click", () => {
+        toggleCard();
+        getClicked(i+1);
+      })
+    }
+    // To get currently intersecting tile in mobile view
+    const options ={
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    }
+    const observer= new IntersectionObserver(ref => {
+        if (ref.isIntersecting){
+          return true;
+        }
+        else {return false;}
+      }
+    , options)
+    for (let i=0; i<eventRefs.length;i++){
+      if (observer.observe(eventRefs[i].current)){
+        setCurrent(i+1);
+      }
+    }
 
     function handleResize(){
       if (window.innerWidth <= 768){
@@ -91,7 +81,7 @@ export default function Gallery() {
       window.removeEventListener('resize', handleResize);
     }
 
-  }, []);
+  }, [current,active]);
   function leftScroll() {
     gallery.current.scrollLeft -= 320;
   }
@@ -118,13 +108,14 @@ export default function Gallery() {
         </div>
       )}
       <div className="info">
-        {active ? (
+        {isMobile?(
+          <Info event={current} />
+        ):(active ? (
           <Info event={active} />
         ) : (
           <h1 className="info-text">
-            {isMobile? 'Hold a tile for date, time and venue. Tap to know more' : 'Hover over the tiles for date, time and venue. Click to know more'
-}</h1>
-        )}
+            Hover over the tiles for date, time and venue. Click to know more</h1>
+        ))}
       </div>
     </div>
   );

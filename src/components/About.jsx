@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div className="about" id="About">
       <section className="about-content">
+        <div className= "about-div">
         <h1 className="about-header">Welcome, brave traveler...</h1>
-        <p className="about-info">
           <p>
             Join us for a <span>3-day celebration</span> of all things tech,
             where innovation and creativity collide to create a fantastical
@@ -31,7 +31,7 @@ export default function About() {
             excitement, and innovation. The fate of the tech world rests in your
             hands!
           </p>
-        </p>
+        </div>
       </section>
     </div>
   );

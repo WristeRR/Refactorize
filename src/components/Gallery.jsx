@@ -98,7 +98,7 @@ export default function Gallery() {
       )}
       <div className="info-gallery">
         {isMobile?(
-          <h1>Tap a tile for details</h1>
+          <h1 className= "info-header-mobile">Tap a tile for details</h1>
         ):((active?(<Info event={active}/>):(
           <h1 className="info-text">
             Hover over the tiles for date, time and venue. Click to know more</h1>

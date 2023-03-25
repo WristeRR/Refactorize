@@ -13,15 +13,16 @@
     animation: expand 300ms ease;
 }
 .register-button{
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     background: none;
     color: white;
     border: 2px solid white;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: 200ms ease;
     margin-bottom: 30px;
+    font-size: larger;
 }
 .register-button:hover{
     background-color: white;

@@ -180,11 +180,26 @@
         font-size: x-large;
     }
     .card-background{
-        background-color: rgba(0,0,0,0.90);
+        background-color: rgba(0,0,0,0.8);
         display:flex;
         flex-direction: column;
     }
     .info-gallery{
         text-align: center;
+    }
+    .tile:hover {
+        transform: none;
+        filter: none;
+        z-index: auto;
+    }
+    .grid:hover >*{
+        transform: none;
+        filter: none;
+    }
+    .tile:active{
+        transform: scale(0.8);
+    }
+    .info-header-mobile{
+        margin: 20% 0;
     }
 }

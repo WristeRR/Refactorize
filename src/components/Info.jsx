@@ -31,6 +31,11 @@ const eventList={
         venue: "Smt.Sharada Pai Auditorium",
         date: "31st March 2023",
         time: "12:30 pm"
+    },
+    none:{
+        venue: '',
+        date: '',
+        time: ''
     }
     
 }
@@ -57,6 +62,7 @@ export default function Info(props){
         if (event === 6){
             return "idealise"
         }
+        else return "none"
     }
     const eventName= getEventName();
     return (

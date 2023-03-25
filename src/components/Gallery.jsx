@@ -52,27 +52,7 @@ export default function Gallery() {
         getClicked(i+1);
       })
     }
-    // To get currently intersecting tile in mobile view
-    const options ={
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5
-    }
-    const observer= new IntersectionObserver(ref => {
-        if (ref.isIntersecting){
-          setCheckIntersection(true);
-        }
-        else{
-          setCheckIntersection(false);
-        }
-      }
-    , options)
-    for (let i=0; i<eventRefs.length;i++){
-      observer.observe(eventRefs[i].current)
-      if (checkIntersection){
-        setCurrent(i+1);
-      }
-    }
+    
 
     function handleResize(){
       if (window.innerWidth <= 768){
@@ -89,7 +69,7 @@ export default function Gallery() {
       window.removeEventListener('resize', handleResize);
     }
 
-  }, [current,active]);
+  }, [current,active,isMobile]);
   function leftScroll() {
     gallery.current.scrollLeft -= 320;
   }
@@ -113,17 +93,17 @@ export default function Gallery() {
       {showCard && (
         <div className="card-background" onClick={toggleCard}>
           <Card event={clicked} />
+          {isMobile && <Info event={clicked}/>}
         </div>
       )}
-      <div className="info">
+      <div className="info-gallery">
         {isMobile?(
-          <Info event={current} />
-        ):(active ? (
-          <Info event={active} />
-        ) : (
+          <h1>Tap a tile for details</h1>
+        ):((active?(<Info event={active}/>):(
           <h1 className="info-text">
             Hover over the tiles for date, time and venue. Click to know more</h1>
-        ))}
+        ) )
+        )}
       </div>
     </div>
   );

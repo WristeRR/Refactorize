@@ -98,3 +98,24 @@ a:-webkit-any-link {
 .socialDiscord:hover {
   color: #7289da;
 }
+
+@media screen and (max-width: 768px) {
+  .row1 {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0px;
+  }
+
+  .quickLinks {
+    padding: 2rem 0px;
+    padding-bottom: 3rem;
+  }
+  .quickLink {
+    font-size: 1rem;
+    margin: 0px 0.5rem;
+  }
+}

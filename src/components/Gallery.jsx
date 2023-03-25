@@ -16,6 +16,11 @@ export default function Gallery() {
   const cryptx = useRef(null);
   const surprise = useRef(null);
   const idealise = useRef(null);
+  let checkIntersection= false;
+
+  function setCheckIntersection(val){
+    checkIntersection= val;
+  }
 
   const eventRefs= [synthesise, panel, visualise, cryptx, surprise, idealise];
 
@@ -55,13 +60,16 @@ export default function Gallery() {
     }
     const observer= new IntersectionObserver(ref => {
         if (ref.isIntersecting){
-          return true;
+          setCheckIntersection(true);
         }
-        else {return false;}
+        else{
+          setCheckIntersection(false);
+        }
       }
     , options)
     for (let i=0; i<eventRefs.length;i++){
-      if (observer.observe(eventRefs[i].current)){
+      observer.observe(eventRefs[i].current)
+      if (checkIntersection){
         setCurrent(i+1);
       }
     }

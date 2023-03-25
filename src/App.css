@@ -92,18 +92,6 @@ body {
   font-weight: 500;
   font-size: 1.8rem;
 }
-.about-info{
-  font-family: "Gruppo", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  padding-left: 140px;
-  padding-right: 140px;
-  overflow-y: hidden;
-}
-
-.about-info span {
-  font-size: 1.8rem;
-}
 
 .buttons {
   margin-top: 50px
@@ -139,5 +127,16 @@ body {
 .btn-sponsor {
   background-color: transparent;
   border: 1px solid white;
+}
+
+.about-div{
+  font-family: "Gruppo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 10% 0;
+}
+
+.about-div span {
+  font-size: 1.8rem;
 }
 

@@ -66,17 +66,17 @@ export const sponsorsList = [
   },
   {
     name: ".XYZ",
-    src: "src/assets/sponsorLogos/xyz-logo-color.png",
+    src: "/xyz-logo-color.png",
     href: "https://gen.xyz/",
   },
   {
     name: "Give My Certificate",
-    src: "src/assets/sponsorLogos/gmc_logo.png",
+    src: "/gmc_logo.png",
     href: "https://givemycertificate.com/",
   },
   {
     name: "Interview Cake",
-    src: "src/assets/sponsorLogos/InterviewCake 2.png",
+    src: "/InterviewCake 2.png",
     href: "https://www.interviewcake.com/",
   },
 ];

@@ -15,11 +15,11 @@ export default function Nav() {
           <Link className="nav-link" to="#About" smooth>
             <span>About</span>
           </Link>
-          <Link className="nav-link" to="#Sponsors" smooth>
-            <span>Sponsors</span>
-          </Link>
           <Link className="nav-link" to="#Events" smooth>
             <span>Events</span>
+          </Link>
+          <Link className="nav-link" to="#Sponsors" smooth>
+            <span>Sponsors</span>
           </Link>
           <a href="https://www.randomizemuj.com/team" className="nav-link" target="_blank">
             <span>Team</span>
